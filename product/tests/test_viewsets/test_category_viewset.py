@@ -17,7 +17,7 @@ class TestCategoryViewSet(APITestCase):
 
 	def test_get_all_category(self):
 		response = self.client.get(
-			reserve("category-list", kwargs={"version": "v1"})
+			reverse("category-list", kwargs={"version": "v1"})
 		)
 
 		self.assertEqual(response.status_code, status.HTTP_200_OK)

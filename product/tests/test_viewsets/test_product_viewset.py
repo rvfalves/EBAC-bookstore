@@ -22,7 +22,7 @@ class TestProductViewSet(APITestCase):
 
 	def test_get_all_product(self):
 		response = self.client.get(
-			reserve("product-list", kwargs={"version": "v1"})
+			reverse("product-list", kwargs={"version": "v1"})
 		)
 
 		self.assertEqual(response.status_code, status.HTTP_200_OK)
